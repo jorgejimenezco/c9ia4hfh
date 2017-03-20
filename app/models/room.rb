@@ -15,6 +15,6 @@
 class Room < ActiveRecord::Base
   validates :title, :description, :beds, :guests, presence: true
   validates :description, length: { in: 5...400 }
-  validates :beds, :integer
-  validates :guests, :integer
+  validates :beds, :equal_to => integer:
+  validates :guests, :equal_to => integer:
 end
